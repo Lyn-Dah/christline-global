@@ -218,7 +218,7 @@ export default function ChristlineLandingPage() {
         <div className="marquee-track inline-flex gap-10 font-mono font-bold text-sm tracking-wider uppercase">
           {Array(2).fill(0).map((_, i) => (
             <span key={i} className="inline-flex gap-10">
-              <span>✈️ VISA SUPPORT</span>
+              <span>✈️ VISA APPLICATION</span>
               <span className="text-amber-300">✈️ SCHOOL APPLICATION</span>
               <span>✈️ FLIGHT &amp; ACCOMMODATION</span>
               <span className="text-amber-300">✈️ DOCUMENTATION GUIDANCE</span>
