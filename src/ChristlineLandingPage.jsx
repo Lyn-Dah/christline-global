@@ -1,4 +1,7 @@
 import { useState } from "react";
+import heroimg from "./assets/heroimg.jpg";
+import logo from "./assets/logo.jpg";
+import img1 from "./assets/img1.jpg";
 
 // --- Content data ---------------------------------------------------------
 
@@ -106,12 +109,13 @@ export default function ChristlineLandingPage() {
       <header className="sticky top-0 z-50 bg-stone-50/90 backdrop-blur border-b-4 border-slate-900">
         <nav className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <LogoMark />
+            {/* <LogoMark /> */}
+            <img src={logo} alt="Christline Global Travel Consult logo" className="w-10 h-10 rounded-full border-2 border-slate-900 object-cover" />
             <div className="font-serif leading-tight">
               <div className="font-bold text-slate-900 text-sm sm:text-base">
-                CHRISTLINE <span className="text-orange-500">GLOBAL</span> TRAVEL CONSULT
+                CHRISTLINE <span className="text-orange-500">GLOBAL</span> TRAVEL CONSULTANCY
               </div>
-              <div className="font-mono text-[10px] tracking-widest text-slate-500 uppercase">Fly with confidence</div>
+              {/* <div className="font-mono text-[10px] tracking-widest text-slate-500 uppercase">Fly with confidence</div> */}
             </div>
           </div>
           <div className="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-700">
@@ -121,7 +125,7 @@ export default function ChristlineLandingPage() {
             <a href="#destinations" className="hover:text-orange-500">Destinations</a>
           </div>
           <a href="#apply" className="hidden sm:inline-flex items-center px-5 py-2.5 rounded-full font-bold text-sm border-2 border-slate-900 bg-white shadow-[4px_4px_0_0_#dbeafe] hover:shadow-[6px_6px_0_0_#dbeafe] transition-shadow">
-            Start Your Application
+            Book a Consultation
           </a>
           <button
             className="md:hidden border-2 border-slate-900 rounded-lg px-3 py-1.5 font-bold"
@@ -137,7 +141,7 @@ export default function ChristlineLandingPage() {
             <a href="#how" onClick={() => setNavOpen(false)}>Process</a>
             <a href="#testimonials" onClick={() => setNavOpen(false)}>Testimonials</a>
             <a href="#destinations" onClick={() => setNavOpen(false)}>Destinations</a>
-            <a href="#apply" onClick={() => setNavOpen(false)}>Start Your Application</a>
+            <a href="#apply" onClick={() => setNavOpen(false)}>Book a Consultation</a>
           </div>
         )}
       </header>
@@ -146,26 +150,26 @@ export default function ChristlineLandingPage() {
       <section className="relative overflow-hidden bg-linear-to-br from-blue-50 via-stone-50 to-amber-50 py-20">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <Eyebrow>Ghana-based &middot; Trusted travel guidance</Eyebrow>
+            {/* <Eyebrow>Trusted travel guidance</Eyebrow> */}
             <h1 className="font-serif font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-slate-900">
               Travel with confidence.<br />
               We&apos;ll handle the <span className="text-orange-500">complexity.</span>
             </h1>
-            <p className="mt-6 text-lg text-slate-600 max-w-md leading-relaxed">
-              From visa paperwork to flight bookings, Christline Global Travel Consult guides you through every step of travelling abroad — clearly, honestly, and personally.
+            <p className="mt-6 text-lg text-slate-900 max-w-md leading-relaxed">
+              From visa paperwork to flight bookings, Christline Global Travel Consultancy guides you through every step of travelling abroad — clearly, honestly, and personally.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <PrimaryButton href="#apply" className="bg-orange-500 text-white">
-                Start Your Application →
+                Book a Consultation →
               </PrimaryButton>
-              <PrimaryButton href={WHATSAPP_URL} className="bg-emerald-400 text-slate-900">
+              <PrimaryButton href={WHATSAPP_URL} className="bg-green-500 text-white">
                 📞 WhatsApp Us
               </PrimaryButton>
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Badge>✅ Visa Support</Badge>
-              <Badge bg="bg-orange-200" rotate="rotate-1">🌟 Trusted Locally</Badge>
-              <Badge bg="bg-teal-200" rotate="-rotate-1">⏱️ Fast Response</Badge>
+              {/* <Badge>✅ Visa Support</Badge> */}
+              {/* <Badge bg="bg-orange-200" rotate="rotate-1">🌟 Trusted Locally</Badge> */}
+              {/* <Badge bg="bg-teal-200" rotate="-rotate-1">⏱️ Fast Response</Badge> */}
             </div>
 
             <div className="mt-10 flex border-2 border-dashed border-slate-900 rounded-2xl bg-white px-6 py-4 max-w-lg shadow-[5px_5px_0_0_#dbeafe]">
@@ -187,14 +191,12 @@ export default function ChristlineLandingPage() {
           <div className="relative h-96">
             {/* REPLACE PHOTOS: swap these picsum placeholders with real photos */}
             <div className="absolute -top-4 -left-3 z-10 bg-white border-2 border-slate-900 rounded-xl px-4 py-2 font-mono text-xs font-bold text-slate-900 shadow-[4px_4px_0_0_#0f172a] -rotate-3">
-              ✈️ 20+ Destinations
+              30+ Destinations
             </div>
-            <div className="absolute top-1/2 -right-4 z-10 bg-orange-500 text-white border-2 border-slate-900 rounded-xl px-4 py-2 font-mono text-xs font-bold shadow-[4px_4px_0_0_#0f172a] -rotate-2">
-              📋  100+ Docs Reviewed
-            </div>
+            
             <div className="absolute inset-4 rounded-3xl border-4 border-slate-900 shadow-[8px_8px_0_0_#fbbf24] overflow-hidden">
               <img
-                src="https://picsum.photos/seed/christline-hero/700/700"
+                src={heroimg}
                 alt="Traveler ready to fly"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -203,9 +205,9 @@ export default function ChristlineLandingPage() {
             <div className="absolute top-8 -right-6 w-32 h-24 rounded-2xl border-4 border-white shadow-[5px_5px_0_0_#0f172a] overflow-hidden rotate-6">
               <img src="https://picsum.photos/seed/christline-chip-a/300/220" alt="Passport and boarding pass" className="w-full h-full object-cover" loading="lazy" />
             </div>
-            <div className="absolute bottom-6 -left-6 w-32 h-24 rounded-2xl border-4 border-white shadow-[5px_5px_0_0_#0f172a] overflow-hidden -rotate-6">
-              <img src="https://picsum.photos/seed/christline-chip-b/300/220" alt="Airplane window view" className="w-full h-full object-cover" loading="lazy" />
-            </div>
+            {/* <div className="absolute bottom-6 -left-6 w-32 h-24 rounded-2xl border-4 border-white shadow-[5px_5px_0_0_#0f172a] overflow-hidden -rotate-6">
+              <img src={img} alt="Airplane window view" className="w-full h-full object-cover" loading="lazy" />
+            </div> */}
             <div className="absolute -bottom-6 right-8 z-10 bg-white border-2 border-slate-900 rounded-xl px-4 py-2 font-mono text-xs font-bold text-slate-900 shadow-[4px_4px_0_0_#0f172a] rotate-3">
               🌟 4.9/5 Client Rating
             </div>
@@ -241,7 +243,7 @@ export default function ChristlineLandingPage() {
             {SERVICES.map((s, i) => (
               <div
                 key={s.title}
-                className={`bg-white border-2 border-slate-900 rounded-2xl p-7 transition-transform hover:-translate-x-1 hover:-translate-y-1 ${
+                className={`bg-white border-2 border-slate-900 rounded-2xl p-7 transition-transform hover:-translate-x-1  hover:-translate-y-1 ${
                   i % 3 === 0 ? "shadow-[5px_5px_0_0_#dbeafe] hover:shadow-[8px_8px_0_0_#0f172a]" :
                   i % 3 === 1 ? "shadow-[5px_5px_0_0_#fde68a] hover:shadow-[8px_8px_0_0_#0f172a]" :
                   "shadow-[5px_5px_0_0_#fed7aa] hover:shadow-[8px_8px_0_0_#0f172a]"
@@ -251,7 +253,7 @@ export default function ChristlineLandingPage() {
                   {s.icon}
                 </div>
                 <h3 className="font-bold text-slate-900 mt-4">{s.title}</h3>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed">{s.desc}</p>
+                <p className="text-sm text-slate-900 mt-2 leading-relaxed">{s.desc}</p>
               </div>
             ))}
           </div>
@@ -280,15 +282,15 @@ export default function ChristlineLandingPage() {
           </div>
           <div className="relative rounded-3xl border-4 border-slate-900 shadow-[8px_8px_0_0_#fbbf24] overflow-hidden min-h-[380px] flex flex-col justify-between p-9">
             {/* REPLACE PHOTO: swap with a real team/office photo */}
-            <img src="https://picsum.photos/seed/christline-why/700/700" alt="Christline Global Travel Consult team" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <img src={img1} alt="Christline Global Travel Consult team" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
             <div className="absolute inset-0 bg-linear-to-br from-slate-900/95 to-slate-900/70" />
             <div className="relative z-10">
-              <span className="inline-block font-mono text-xs tracking-widest uppercase border-2 border-amber-300 text-amber-300 rounded-full px-3 py-1.5">
+              {/* <span className="inline-block font-mono text-xs tracking-widest uppercase border-2 border-amber-300 text-amber-300 rounded-full px-3 py-1.5">
                 Verified &middot; Client-first
               </span>
               <p className="font-serif text-2xl text-white mt-6 leading-snug">
                 &ldquo;Clarity beats speed. We&apos;d rather get your application right the first time.&rdquo;
-              </p>
+              </p> */}
             </div>
             <div className="relative z-10 text-sm text-blue-100">Christline Global Travel Consult — Accra, Ghana</div>
           </div>
@@ -335,12 +337,12 @@ export default function ChristlineLandingPage() {
                 <div className="text-amber-400 text-sm tracking-widest">★★★★★</div>
                 <p className="text-sm text-slate-700 leading-relaxed">&ldquo;{t.quote}&rdquo;</p>
                 <div className="flex items-center gap-3 mt-auto">
-                  <img
+                  {/* <img
                     src={`https://picsum.photos/seed/${t.seed}/100/100`}
                     alt={t.name}
                     className="w-10 h-10 rounded-full border-2 border-slate-900 object-cover"
                     loading="lazy"
-                  />
+                  /> */}
                   <div>
                     <div className="font-bold text-sm text-slate-900">{t.name}</div>
                     <div className="font-mono text-xs text-slate-500">{t.route}</div>
@@ -434,15 +436,15 @@ export default function ChristlineLandingPage() {
       {/* FINAL CTA */}
       <section className="relative overflow-hidden bg-linear-to-br from-slate-900 via-blue-950 to-blue-900 text-white text-center py-24">
         <div className="max-w-3xl mx-auto px-6 relative z-10">
-          <Eyebrow light>Ready to travel?</Eyebrow>
-          <h2 className="font-serif font-bold text-4xl  text-yellow-400 sm:text-5xl">Let&apos;s get your journey started.</h2>
-          <p className="mt-4 text-green-400 text-lg">Message us on WhatsApp for a quick, no-pressure consultation.</p>
+          {/* <Eyebrow light>Ready to travel?</Eyebrow> */}
+          <h2 className="font-serif font-bold text-4xl  text-orange-500 sm:text-5xl">Let&apos;s get your journey started.</h2>
+          <p className="mt-4 text-slate-900 text-lg">Message us on WhatsApp for a quick, no-pressure free consultation.</p>
           <div className="mt-9 flex flex-wrap gap-4 justify-center">
-            <PrimaryButton href={WHATSAPP_URL} className="bg-emerald-400 text-slate-900">
+            <PrimaryButton href={WHATSAPP_URL} className="bg-green-600 text-white">
               📞 WhatsApp Us Today
             </PrimaryButton>
-            <PrimaryButton href="#apply" className="bg-amber-300 text-slate-900">
-              Start Your Application
+            <PrimaryButton href="#apply" className="bg-orange-500 text-white">
+              Book a Consultation
             </PrimaryButton>
           </div>
         </div>
